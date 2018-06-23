@@ -1,0 +1,104 @@
+extends layouts/main-page
+
+block variables
+    - var title = 'Элементы страницы'
+    - var pageClass = 'innerpage'
+
+block columns
+    main.content-left.col-lg-8
+        article.page.textblock
+            h1 Элементы страницы
+
+            p <strong>Заголовки</strong>
+            h1 Заголовок H1
+            h2 Заголовок H2
+            h3 Заголовок H3
+            h4 Заголовок H4
+            h5 Заголовок H5
+            h6 Заголовок H6
+
+            br
+            hr
+            br
+            p <strong>Абзац</strong>
+            p.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation <strong>ullamco laboris</strong> nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in <a href="#">ссылка</a> in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt <abbr title="Подсказка">mollit</abbr> anim id est laborum.
+
+            br
+            hr
+            br
+            p <strong>Цитата</strong>
+            blockquote.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+
+            p <strong>Иконка svg</strong>
+            p Иконка SVG
+            +icon('edit')
+            +icon('top-arrow')
+            +icon('cart')
+            br
+            hr
+            br
+            p <strong>Кнопки</strong>
+            .buttons
+                a.btn.btn-primary.mx-1(href="#") Primary
+                a.btn.btn-secondary.mx-1(href="#") Secondary
+                a.btn.btn-success.mx-1(href="#") Success
+                a.btn.btn-danger.mx-1(href="#") Danger
+                a.btn.btn-warning.mx-1(href="#") Warning
+                a.btn.btn-info.mx-1(href="#") Info
+                a.btn.btn-light.mx-1(href="#") Light
+                a.btn.btn-dark.mx-1(href="#") Dark
+                a.btn.btn-link.mx-1(href="#") Link
+            br
+            hr
+            br
+            p <strong>Кнопки пустые</strong>
+                .buttons
+                    a.btn.btn-outline-primary.mx-1(href="#") Primary
+                    a.btn.btn-outline-secondary.mx-1(href="#") Secondary
+                    a.btn.btn-outline-success.mx-1(href="#") Success
+                    a.btn.btn-outline-danger.mx-1(href="#") Danger
+                    a.btn.btn-outline-warning.mx-1(href="#") Warning
+                    a.btn.btn-outline-info.mx-1(href="#") Info
+                    a.btn.btn-outline-light.mx-1(href="#") Light
+                    a.btn.btn-outline-dark.mx-1(href="#") Dark
+
+            br
+            hr
+            br
+            p <strong>Таблица</strong>
+            table.table
+                thead
+                    tr
+                        th Заголовок
+                        th Заголовок
+                        th Заголовок
+                tbody
+                    tr
+                        td Значение
+                        td Значение
+                        td Значение
+                    tr
+                        td Значение
+                        td Значение
+                        td Значение
+                    tr
+                        td Значение
+                        td Значение
+                        td Значение
+            br
+            hr
+            br
+            p <strong>Форма</strong>
+            form
+                input.inputbox(type="text", placeholder="Заголовок")
+
+
+    //- Sidebar
+    include regions/sidebar.pug

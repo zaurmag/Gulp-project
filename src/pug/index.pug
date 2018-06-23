@@ -1,0 +1,28 @@
+extends layouts/main-page
+
+block variables
+    - var title = 'Главная страница'
+    - var pageClass = 'homepage'
+
+block top-position
+    .module
+        .module__title Модуль в позиции TOP
+
+block columns
+    main.content-left.col-lg-8
+        article.page.textblock
+            h1 Заголовок страницы
+            p.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation <strong>ullamco laboris</strong> nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt <abbr title="Подсказка">mollit</abbr> anim id est laborum.
+
+    //- Sidebar
+    include regions/sidebar.pug
+
+block bottom-position
+    .module
+        .module__title Модуль в позиции BOTTOM

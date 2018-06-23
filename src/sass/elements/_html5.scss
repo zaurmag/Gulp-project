@@ -1,0 +1,32 @@
+/** ========== Html5 tags ========== **/
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+[hidden], template {
+    display: none;
+}
+fieldset, img {
+    border: none
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+figure {
+    margin: 0;
+}
+.star, .red {
+    color: red
+}
+address {
+    font-style: normal;
+}

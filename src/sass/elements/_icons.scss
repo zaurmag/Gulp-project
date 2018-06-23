@@ -1,0 +1,41 @@
+.icon {
+    display: inline-block;
+}
+.icon-email {
+	@include sprite($mail);
+}
+.icon-phone {
+	@include sprite($phone);
+}
+.icon-placeholder {
+	@include sprite($placeholder);
+}
+.icon-email-black {
+	@include sprite($mail-black);
+}
+.icon-phone-black {
+	@include sprite($phone-black);
+}
+.icon-placeholder-black {
+	@include sprite($placeholder-black);
+}
+.icon-buch-otch {
+	@include sprite($buch-otch);
+}
+.icon-zarplata {
+	@include sprite($zarplata);
+}
+.icon-nal-dekl {
+	@include sprite($nal-dekl);
+}
+.icon-reg-predpr {
+	@include sprite($reg-predpr);
+}
+.icon-phone-xxl {
+	 @include sprite($phone-xxl);
+ }
+.icon-phone-mobile {
+    background: url("../images/icons/png/phone-xxl.png") 0 0 / cover no-repeat;
+    height: 19px;
+    width: 17px;
+}
