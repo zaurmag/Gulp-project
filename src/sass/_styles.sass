@@ -1,0 +1,166 @@
+@charset "UTF-8"
+
+/** -------------------------------------------
+    *  ZM-IT - разработка сайтов
+    *  https://zm-it.ru
+    *  E-mail: info@zm-it.ru
+    *  Skype: zaur-mag11
+    *  Phone: +7 (928) 526-55-44
+    *  Автор: Заур Магомедов
+    *  Автор URL: https://zaurmag.ru
+    --------------------------------------------------- **/
+
+#page
+    background-color: transparent
+    display: flex
+    flex-direction: column
+    margin: 0 auto
+    text-align: left
+    min-width: 320px
+    max-width: 1920px
+    transition: margin .2s ease
+    position: relative
+    height: 100vh
+    @include media-breakpoint-down(md)
+        padding-top: 75px
+
+// ****************** Overlay ******************
+.overlay
+    background-color: rgba(0, 0, 0, .35)
+    opacity: 0
+    visibility: hidden
+    position: fixed
+    transition: all .3s ease
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 101
+
+body
+    background-color: $white
+
+    &.animate
+        .overlay
+            visibility: visible
+            opacity: 1
+            transition: all .3s ease
+
+
+/** === Fix для браузера ИЕ11 === *
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+    #page
+        display: block
+
+/* -------------------------------------------------------------------------------------- *
+ *                                   ** POSITIONS **
+ * -------------------------------------------------------------------------------------- */
+
+// ****************** Top positions ******************
+.top-position
+    margin-bottom: 30px
+
+// ****************** Top content positions ******************
+.top-content-position
+    margin-bottom: 30px
+
+// ****************** Bottom positions ******************
+.bottom-position
+    margin-top: 30px
+
+/* -------------------------------------------------------------------------------------- *
+ *                                   // POSITIONS //
+ * -------------------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------------------- *
+ *                                  ** MAIN COLUMNS **
+ * -------------------------------------------------------------------------------------- */
+
+.maincontainer
+    flex: 1
+
+@include media-breakpoint-up(lg)
+    // ****************** Content col ******************
+    .content-left, .content-middle
+        position: relative
+
+    .content-left
+        left: 33.3333%
+
+    .content-middle
+        left: 25%
+
+    // ****************** Sidebar col ******************
+    .left-sidebar
+        position: relative
+        left: -66.6666%
+
+    .left-sidebar.both-sidebars
+        left: -50%
+
+/* -------------------------------------------------------------------------------------- *
+ *                                  // MAIN COLUMNS //
+ * -------------------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------------------- *
+ *                                  ** COMPONENTS **
+ * -------------------------------------------------------------------------------------- */
+
+// ****************** Paginations ******************
+.pagination
+    border-top: 1px solid #ccc
+    margin-top: 30px
+    padding-top: 15px
+
+    &__list
+        align-items: center
+        color: #777
+        display: flex
+        text-align: center
+        font-size: 14px
+
+        li
+            margin: 0 5px
+            
+/* -------------------------------------------------------------------------------------- *
+ *                                  ** COMPONENTS **
+ * -------------------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------------------- *
+ *                                  ** MODULES **
+ * -------------------------------------------------------------------------------------- */
+
+// ****************** Base styles ******************
+.module
+    &:not(:last-child)
+        margin: 0 0 30px
+
+    &__title
+        border-bottom: 1px solid rgb(227, 227, 227)
+        color: #444
+        font-size: 20px
+        font-weight: 700
+        margin: 0 0 20px
+        text-align: left
+        padding-bottom: 10px
+
+
+/* -------------------------------------------------------------------------------------- *
+ *                                  // MODULES //
+ * -------------------------------------------------------------------------------------- */
+
+
+.maincontent
+    .main-title
+        font-size: 30px
+        font-weight: 700
+        margin: 0 0 30px
+
+    .description
+        margin-bottom: 30px
+
+        p
+            color: #444444
+            font-size: 16px
+            line-height: 22px
